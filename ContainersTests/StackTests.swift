@@ -11,6 +11,12 @@ class StackTests: QuickSpec {
             it("can be created") {
                 expect(Stack()).toNot(beNil())
             }
+            
+            it("can raise a container on top of the stack") {
+                let stack = Stack()
+                stack.raiseContainer()
+                expect(stack.count).to(equal(1))
+            }
 
         }
     }
